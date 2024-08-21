@@ -156,6 +156,9 @@ nav ul li a:hover:before {
 
 .aboutme1{
     width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .aboutme1 h2{
@@ -197,7 +200,7 @@ nav ul li a:hover:before {
 }
 
 .aboutme2 p{
-    padding-left: 5rem;
+    padding-left: 2rem;
 }
 
 /* SECTION 3 */
@@ -216,7 +219,7 @@ nav ul li a:hover:before {
 }
 
 .text--skills{
-    width: 50%;
+    width: 65%;
 }
 
 .text--skills h2{
@@ -226,7 +229,7 @@ nav ul li a:hover:before {
 }
 
 .text--skills p{
-    line-height: 2;
+    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
@@ -239,7 +242,7 @@ nav ul li a:hover:before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem ;
-    width: 50%;
+    width: 35%;
 }
 
 .cicon--skills{
@@ -284,46 +287,6 @@ nav ul li a:hover:before {
     font-size: 4rem;
     padding-bottom: 2rem;
 }
-
-
-
-
-
-
-
-
-
-/* SECTION 5 */
-
-#section5 {
-    background-color: #2196f3;
-    height: 90vh;
-}
-
-/* FOOTER */
-
-footer {
-    height: 10vh;
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .conteudo__geral {
     display: flex;
@@ -421,3 +384,44 @@ footer {
         --heightItem: 200px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* SECTION 5 */
+
+#section5 {
+    background-color: #2196f3;
+    height: 90vh;
+}
+
+/* FOOTER */
+
+footer {
+    height: 10vh;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
