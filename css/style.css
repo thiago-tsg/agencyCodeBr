@@ -20,6 +20,13 @@
 
 :root {
     --titulo: "Pixelify Sans", sans-serif;
+
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dark1: #181818;
+    --color-dark2: #1e1e1e;
+    --color-purple1: #9333FF;
+    --color-purple2: indigo;
 }
 
 body {
@@ -56,7 +63,7 @@ nav div h1 {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 8rem;
+    gap: 2rem;
 }
 
 nav ul li {
@@ -93,7 +100,7 @@ nav ul li a:hover:before {
 
 /* SECTION 1 */
 
-.background--img{
+.background--img {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(../assets/background/bg--desktop.gif);
     background-position: center;
     background-repeat: no-repeat;
@@ -106,7 +113,7 @@ nav ul li a:hover:before {
     flex-direction: column;
 }
 
-.apresentacao{
+.apresentacao {
     width: 35rem;
     padding: 3rem 1rem;
     text-align: center;
@@ -114,18 +121,18 @@ nav ul li a:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
 }
 
-.apresentacao h1{
+.apresentacao h1 {
     font-family: var(--titulo);
     font-size: 4rem;
     padding-bottom: 2rem;
 }
 
-.apresentacao p{
+.apresentacao p {
     font-size: 1.1rem;
     font-weight: 900;
 }
 
-.apresentacao a{
+.apresentacao a {
     font-size: 1.5rem;
     font-family: var(--titulo);
     font-weight: 900;
@@ -138,7 +145,7 @@ nav ul li a:hover:before {
     align-items: center;
 }
 
-.apresentacao a span{
+.apresentacao a span {
     font-size: 1.5rem;
     padding: .3rem 0 0 .5rem;
     color: #f1bebe;
@@ -146,7 +153,7 @@ nav ul li a:hover:before {
 
 /* SECTION 2 */
 
-.overlay--aboutme{
+.overlay--aboutme {
     width: 74rem;
     padding: 3rem 2rem;
     border-radius: 30px;
@@ -154,30 +161,30 @@ nav ul li a:hover:before {
     display: flex;
 }
 
-.aboutme1{
+.aboutme1 {
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.aboutme1 h2{
+.aboutme1 h2 {
     font-size: 2rem;
     font-weight: 900;
 }
 
-.aboutme1 p{
+.aboutme1 p {
     margin-top: 1rem;
 }
 
-.icon--aboutme{
+.icon--aboutme {
     margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
     align-items: center;
 }
 
-.icon{
+.icon {
     width: 4rem;
     height: 4rem;
     border-radius: 500px;
@@ -186,30 +193,30 @@ nav ul li a:hover:before {
     align-items: center;
 }
 
-.icon:hover{
+.icon:hover {
     transform: translateY(-1rem);
     cursor: pointer;
 }
 
-.icon i{
+.icon i {
     font-size: 2.5rem;
 }
 
-.aboutme2{
+.aboutme2 {
     width: 45%;
 }
 
-.aboutme2 p{
+.aboutme2 p {
     padding-left: 2rem;
 }
 
 /* SECTION 3 */
 
-.skills{
+.skills {
     padding: 1rem 1.5rem;
 }
 
-.overlay--skills{
+.overlay--skills {
     width: 100%;
     padding: 3rem 2rem;
     border-radius: 30px;
@@ -218,34 +225,34 @@ nav ul li a:hover:before {
     gap: 1.5rem;
 }
 
-.text--skills{
+.text--skills {
     width: 65%;
 }
 
-.text--skills h2{
+.text--skills h2 {
     font-family: var(--titulo);
     font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
-.text--skills p{
+.text--skills p {
     line-height: 1.8;
     margin-bottom: 1rem;
 }
 
-.text--skills span a{
+.text--skills span a {
     color: red;
 }
 
-.icon--skills{
+.icon--skills {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem ;
+    grid-gap: 1.5rem;
     width: 35%;
 }
 
-.cicon--skills{
+.cicon--skills {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,19 +265,19 @@ nav ul li a:hover:before {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.cicon--skills div{
+.cicon--skills div {
     width: 2rem;
     height: 2rem;
     margin-right: .5rem;
 }
 
-.cicon--skills div img{
+.cicon--skills div img {
     width: 100%;
 }
 
 /* SECTION 4 */
 
-.overlay--projects{
+.overlay--projects {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -282,7 +289,7 @@ nav ul li a:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
 }
 
-.overlay--projects h2{
+.overlay--projects h2 {
     font-family: var(--titulo);
     font-size: 4rem;
     padding-bottom: 2rem;
@@ -374,7 +381,7 @@ nav ul li a:hover:before {
     background: linear-gradient(-229deg, #cf91ff, #5782f5);
 }
 
-.carrossel-item img{
+.carrossel-item img {
     width: 100%;
 }
 
@@ -385,43 +392,100 @@ nav ul li a:hover:before {
     }
 }
 
-
-
-
-
-
-
-
-
 /* SECTION 5 */
 
-#section5 {
-    background-color: #2196f3;
-    height: 90vh;
+.overlay--contact {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.span-required {
+    display: none;
+    font-size: 0.9rem;
+    margin: 3px 0 0 1px;
+    color: var(--color-red);
+}
+
+.inputs {
+    padding: 0.5rem 0.5rem;
+    outline: none;
+    border-radius: 0.8rem;
+    background-color: var(--color-dark1);
+    border: 2px solid var(--color-dark2);
+    color: var(--color-white);
+    width: 100%;
+    transition: 0.3s;
+}
+
+.inputs:focus {
+    border-color: var(--color-purple1);
+}
+
+button[type="submit"] {
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    background-color: var(--color-purple2);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-purple1);
+}
+
+.cicon--form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.form--icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+}
+
+.form--icon:hover{
+    transform: translateY(-.5rem);
+}
+
+.form--icon i{
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .box-select {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
 }
 
 /* FOOTER */
 
 footer {
-    height: 10vh;
     text-align: center;
     padding: 1rem;
     background-color: #333;
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
