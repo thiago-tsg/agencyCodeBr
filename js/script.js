@@ -159,15 +159,12 @@ initEvents();
 const form = document.getElementById('form');
 const campos = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.span-required');
-const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     nameValidate();
     emailValidate();
-    password();
-    comparePassword();
-
+    phoneValidate();
 })
 
 function setError(index){
@@ -192,6 +189,7 @@ function nameValidate(){
 }
 
 function emailValidate(){
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!emailRegex.test(campos[1].value))
     {
         setError(1);
@@ -201,3 +199,38 @@ function emailValidate(){
         removeError(1);
     }
 }
+
+function phoneValidate() {
+    const phoneValue = campos[2].value.replace(/\D/g, '');
+    const isValidPhone = phoneValue.length === 11 && phoneValue[2] === '9';
+
+    if (!isValidPhone) {
+        setError(2);
+    } else {
+        removeError(2);
+    }
+}
+
+
+// BUTTON FORMS
+
+
+$(function () {
+    $("#button").click(function () {
+        $("#button").addClass("onclic");
+        setTimeout(validate, 250);
+    });
+
+    function validate() {
+        setTimeout(function () {
+            $("#button").removeClass("onclic").addClass("validate");
+            setTimeout(callback, 450);
+        }, 2250);
+    }
+
+    function callback() {
+        setTimeout(function () {
+            $("#button").removeClass("validate");
+        }, 1250);
+    }
+});

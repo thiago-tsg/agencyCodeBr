@@ -472,6 +472,11 @@ button[type="submit"]:hover {
 
 .form--icon i{
     font-size: 2rem;
+    color: var(--color-purple2);
+}
+
+.form--icon i:hover{
+    color: var(--color-purple1);
 }
 
 @media screen and (max-width: 576px) {
@@ -488,4 +493,88 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --gray: #bbbbbb;
+}
+
+.btn--forms {
+    padding: 1rem 0 2rem 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.315);
+    height: 40px;
+    width: 130px;
+    border-radius: 40px;
+    border: 2px solid var(--color-purple1);
+    color: var(--color-purple1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 900;
+}
+
+.btn:hover {
+    color: white;
+    background: var(--color-purple1);
+}
+
+.btn:after {
+    content: "ENVIAR";
+}
+
+.onclic {
+    width: 40px;
+    border-color: var(--gray);
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: var(--color-purple1);
+    animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclic:after {
+    content: "";
+}
+
+.onclic:hover {
+    color: var(--color-purple1);
+}
+
+.validate {
+    font-size: 13px;
+    color: white;
+    background: var(--color-purple1);
+}
+
+.validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
