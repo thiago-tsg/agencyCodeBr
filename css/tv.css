@@ -1,0 +1,9 @@
+/* Small TV (S) */
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+    
+}
+
+/* Large TV (L) */
+@media screen and (min-width: 2560px) {
+    /* Estilos para telas de 2560px ou maiores */
+}

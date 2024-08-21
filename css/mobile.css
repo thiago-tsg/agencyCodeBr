@@ -1,0 +1,16 @@
+/* Extra Small Mobile (XS) */
+
+
+
+
+
+
+
+/* Small Mobile (S) */
+@media screen and (min-width: 480px) and (max-width: 639px) {
+    html{
+        background-color: blue;
+    }
+
+    
+}
