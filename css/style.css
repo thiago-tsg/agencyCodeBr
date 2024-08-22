@@ -622,6 +622,8 @@ footer {
 
     .text--skills h2{
         margin-bottom: 0;
+        font-size: 2rem;
+        margin-bottom: .5rem;
     }
 
     .icon--skills{
@@ -636,6 +638,10 @@ footer {
     .overlay--projects{
         width: auto;
         padding: 0;
+    }
+
+    .container{
+        width: 22rem;
     }
 }
 
