@@ -261,7 +261,6 @@ nav ul li a:hover:before {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -408,7 +407,7 @@ nav ul li a:hover:before {
 /* SECTION 5 */
 
 .overlay--contact {
-    padding: 3rem 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -416,6 +415,12 @@ nav ul li a:hover:before {
     text-align: center;
     border-radius: 30px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
+}
+
+.overlay--contact h1{
+    font-family: var(--titulo);
+    font-size: 2rem;
+    margin-bottom: .5rem;
 }
 
 form {
@@ -562,15 +567,91 @@ footer {
 
 
 
+/* Extra Small Mobile (XS) */
+
+@media (max-width: 480px) {
+
+    body{
+        overflow: auto;
+    }
+
+    nav div h1{
+        font-size: 2.5rem;
+    }
+
+    .menu--desktop{
+        display: none;
+    } 
+
+    .c--apresentacao{
+        padding: 0 1rem;
+    }
+
+    .apresentacao{
+        width: auto !important;
+        padding: 1rem 1rem ;
+    }
+
+    .overlay--aboutme{
+        width: auto;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .aboutme1{
+        width: auto;
+    }
+
+    .aboutme2{
+        width: auto;
+    }
+
+    .skills{
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    .overlay--skills{
+        width: auto;
+    }
+
+    .text--skills{
+        padding: 0;
+    }
+
+    .text--skills h2{
+        margin-bottom: 0;
+    }
+
+    .icon--skills{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+
+    .cursos{
+        width: auto;
+    }
+
+    .overlay--projects{
+        width: auto;
+        padding: 0;
+    }
+}
 
 
 
 
-
-
-
-
-:root {
+@media screen and (min-width: 481px) and (max-width: 767px) {
     
 }
 
+
+/* Small Mobile (S) */
+@media screen and (min-width: 480px) and (max-width: 639px) {
+    html {
+        background-color: blue;
+    }
+
+
+}
