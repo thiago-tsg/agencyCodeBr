@@ -211,7 +211,7 @@ nav ul li a:hover:before {
 /* SECTION 3 */
 
 .skills {
-    padding: 2.5rem 2rem 0 2rem;
+    padding: 1rem 1.5rem;
     flex-direction: row;
     gap: 2rem;
 }
@@ -221,9 +221,8 @@ nav ul li a:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     width: 60%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .text--skills {
@@ -233,17 +232,14 @@ nav ul li a:hover:before {
 .text--skills h2 {
     font-family: var(--titulo);
     font-size: 2.8rem;
-    margin-bottom: 1rem;
 }
 
 .text--skills p {
-    line-height: 1.5;
-    padding-bottom: 1rem;
+    line-height: 1.8;
 }
 
 .text--skills span a {
     color: red;
-    margin-top: 1rem;
 }
 
 .icon--skills {
@@ -261,6 +257,7 @@ nav ul li a:hover:before {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -284,8 +281,6 @@ nav ul li a:hover:before {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 /* SECTION 4 */
