@@ -104,7 +104,7 @@ const update = () => {
 };
 
 const onResize = () => {
-    
+
     const boundingcarrossel = containercarrossel.getBoundingClientRect();
 
     const carrosselProps = {
@@ -116,7 +116,7 @@ const onResize = () => {
 };
 
 const initEvents = () => {
-    
+
     carrossel.addEventListener("mousedown", () => {
         isMouseDown = true;
         carrossel.style.cursor = "grabbing";
@@ -167,35 +167,31 @@ form.addEventListener('submit', (event) => {
     phoneValidate();
 })
 
-function setError(index){
+function setError(index) {
     campos[index].style.border = '2px solid #e63636';
     spans[index].style.display = 'block';
 }
 
-function removeError(index){
+function removeError(index) {
     campos[index].style.border = '';
     spans[index].style.display = 'none';
 }
 
-function nameValidate(){
-    if(campos[0].value.length < 3)
-    {
+function nameValidate() {
+    if (campos[0].value.length < 3) {
         setError(0);
-    } 
-    else
-    {
+    }
+    else {
         removeError(0);
     }
 }
 
-function emailValidate(){
+function emailValidate() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(campos[1].value))
-    {
+    if (!emailRegex.test(campos[1].value)) {
         setError(1);
     }
-    else
-    {
+    else {
         removeError(1);
     }
 }
@@ -236,12 +232,9 @@ $(function () {
 });
 
 
-
-
-
+// ENTRADA DAS DIV A TELA
 
 document.addEventListener('DOMContentLoaded', function () {
-
     const apresentacao = document.querySelector('.apresentacao');
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -251,7 +244,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 apresentacao.classList.remove('animate-slide-in');
             }
         });
-    });
+    }, { threshold: 0.1 });
+
     const section1 = document.querySelector('#section1');
     observer1.observe(section1);
 
@@ -264,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 overlayAboutMe.classList.remove('animate-slide-in-right');
             }
         });
-    });
+    }, { threshold: 0.1 });
     const section2 = document.querySelector('#section2');
     observer2.observe(section2);
 
@@ -291,4 +285,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     observer4.observe(cursos);
+
+    const overlayProjects = document.querySelector('.overlay--projects');
+    const observer5 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                overlayProjects.classList.add('animate-slide-in-left');
+            } else {
+                overlayProjects.classList.remove('animate-slide-in-left');
+            }
+        });
+    });
+    observer5.observe(overlayProjects);
+
+    const overlayContact = document.querySelector('.overlay--contact');
+    const observer6 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                overlayContact.classList.add('animate-slide-in-right');
+            } else {
+                overlayContact.classList.remove('animate-slide-in-right');
+            }
+        });
+    });
+    observer6.observe(overlayContact);
 });
