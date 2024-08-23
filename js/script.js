@@ -241,9 +241,9 @@ $(function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Configuração para a animação de entrada do elemento '.apresentacao'
     const apresentacao = document.querySelector('.apresentacao');
-
-    const observer = new IntersectionObserver(entries => {
+    const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 apresentacao.classList.add('animate-slide-in');
@@ -252,22 +252,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+    const section1 = document.querySelector('#section1');
+    observer1.observe(section1);
 
-    // Observa a section pai que contém .apresentacao
-    const section = document.querySelector('#section1');
-    observer.observe(section);
-});
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+    // Configuração para a animação de entrada do elemento '.overlay--aboutme'
     const overlayAboutMe = document.querySelector('.overlay--aboutme');
-
-    const observer = new IntersectionObserver(entries => {
+    const observer2 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 overlayAboutMe.classList.add('animate-slide-in-right');
@@ -276,8 +266,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-
-    // Observa a section pai que contém .overlay--aboutme
-    const section = document.querySelector('#section1');
-    observer.observe(section);
+    const section2 = document.querySelector('#section2'); // Altere para a seção correta
+    observer2.observe(section2);
 });
