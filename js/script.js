@@ -269,14 +269,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio > 0) {
+            if (entry.isIntersecting) {
                 overlayAboutMe.classList.add('animate-slide-in-right');
             } else {
                 overlayAboutMe.classList.remove('animate-slide-in-right');
             }
         });
-    }, {
-        threshold: 0.1 // Ajuste o valor conforme necessário
     });
 
     // Observa a section pai que contém .overlay--aboutme
