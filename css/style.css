@@ -276,7 +276,7 @@ nav ul li a:hover:before {
 
 /* CURSOS  */
 
-.cursos{
+.cursos {
     width: 40%;
     border-radius: 30px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
@@ -417,7 +417,7 @@ nav ul li a:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
 }
 
-.overlay--contact h1{
+.overlay--contact h1 {
     font-family: var(--titulo);
     font-size: 2rem;
     margin-bottom: .5rem;
@@ -475,11 +475,11 @@ button[type="submit"] {
     border-radius: 500px;
 }
 
-.form--icon:hover{
+.form--icon:hover {
     transform: translateY(-.5rem);
 }
 
-.form--icon i{
+.form--icon i {
     font-size: 2rem;
 }
 
@@ -571,77 +571,107 @@ footer {
 
 @media (max-width: 480px) {
 
-    body{
+    body {
         overflow: auto;
     }
 
-    nav div h1{
+    .background--img {
+        height: auto;
+    }
+
+    .section {
+        height: auto;
+    }
+
+    nav div h1 {
         font-size: 2.5rem;
     }
 
-    .menu--desktop{
+    .menu--desktop {
         display: none;
-    } 
+    }
 
-    .c--apresentacao{
+
+
+
+
+    /* SECTION 1 APRESENTAÇÃO */
+
+    .c--apresentacao {
         padding: 0 1rem;
     }
 
-    .apresentacao{
+    .apresentacao {
         width: auto !important;
-        padding: 1rem 1rem ;
+        padding: 1rem 1rem;
     }
 
-    .overlay--aboutme{
+    .overlay--aboutme {
         width: auto;
         padding: 1rem;
         flex-direction: column;
     }
 
-    .aboutme1{
+    .aboutme1 {
         width: auto;
     }
 
-    .aboutme2{
+    .icon--aboutme {
+        margin: .5rem 0rem;
+    }
+
+    .aboutme2 {
         width: auto;
     }
 
-    .skills{
+    .aboutme2 p {
+        padding: 0;
+    }
+
+
+
+
+
+
+
+
+
+    .skills {
         flex-direction: column;
         padding: 0;
         gap: 0;
     }
 
-    .overlay--skills{
+    .overlay--skills {
         width: auto;
     }
 
-    .text--skills{
+    .text--skills {
         padding: 0;
     }
 
-    .text--skills h2{
+    .text--skills h2 {
         margin-bottom: 0;
         font-size: 2rem;
         margin-bottom: .5rem;
     }
 
-    .icon--skills{
+    .icon--skills {
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
     }
 
-    .cursos{
+    .cursos {
         width: auto;
     }
 
-    .overlay--projects{
+    .overlay--projects {
         width: auto;
         padding: 0;
     }
 
-    .container{
-        width: 22rem;
+    .container {
+        width: 25rem !important;
     }
 }
 
@@ -649,7 +679,109 @@ footer {
 
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
-    
+
+    body {
+        overflow: auto;
+    }
+
+    .background--img {
+        height: auto;
+    }
+
+    .section {
+        height: auto;
+    }
+
+    nav div h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu--desktop {
+        display: none;
+    }
+
+
+
+
+
+    /* SECTION 1 APRESENTAÇÃO */
+
+    .c--apresentacao {
+        padding: 0 1rem;
+    }
+
+    .apresentacao {
+        width: auto !important;
+        padding: 1rem 1rem;
+    }
+
+    .overlay--aboutme {
+        width: auto;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .aboutme1 {
+        width: auto;
+    }
+
+    .icon--aboutme {
+        margin: .5rem 0rem;
+    }
+
+    .aboutme2 {
+        width: auto;
+    }
+
+    .aboutme2 p {
+        padding: 0;
+    }
+
+
+
+
+
+
+
+
+
+    .skills {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    .overlay--skills {
+        width: auto;
+    }
+
+    .text--skills {
+        padding: 0;
+    }
+
+    .text--skills h2 {
+        margin-bottom: 0;
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    .icon--skills {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+
+    .cursos {
+        width: auto;
+    }
+
+    .overlay--projects {
+        width: auto;
+        padding: 0;
+    }
+
+    .container {
+        width: 25rem !important;
+    }
 }
 
 
