@@ -574,10 +574,17 @@ footer {
 
     body {
         overflow: auto;
+        height: 100%;
+        background-image: url('../assets/background/bg--desktop.gif');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
 
     .background--img {
         height: auto;
+        background-image: none;
     }
 
     .section {
@@ -617,12 +624,12 @@ footer {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     }
 
-    .apresentacao h1{
+    .apresentacao h1 {
         font-size: 2.5rem;
         line-height: 1.5;
     }
 
-    .apresentacao p{
+    .apresentacao p {
         font-size: .8rem;
         line-height: 1.5;
     }
@@ -648,11 +655,11 @@ footer {
         width: 100%;
     }
 
-    .aboutme1 p{
+    .aboutme1 p {
         font-size: .8rem;
     }
 
-    .aboutme1 h2{
+    .aboutme1 h2 {
         font-size: 1.5rem;
     }
 
@@ -695,11 +702,11 @@ footer {
         margin-bottom: .5rem;
     }
 
-    .text--skills p{
+    .text--skills p {
         font-size: .8rem;
     }
 
-    .text--skills span{
+    .text--skills span {
         font-size: .8rem;
     }
 
@@ -717,7 +724,7 @@ footer {
 
     /* PROJECT */
 
-    .project{
+    .project {
         padding: 1rem;
     }
 
