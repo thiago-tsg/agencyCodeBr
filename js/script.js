@@ -261,20 +261,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const overlayAboutMe = document.querySelector('.overlay--aboutme');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.intersectionRatio > 0) {
                 overlayAboutMe.classList.add('animate-slide-in-right');
             } else {
                 overlayAboutMe.classList.remove('animate-slide-in-right');
             }
         });
+    }, {
+        threshold: 0.1 // Ajuste o valor conforme necessário
     });
 
     // Observa a section pai que contém .overlay--aboutme
-    const section = document.querySelector('#section1'); // Ajuste o seletor conforme necessário
+    const section = document.querySelector('#section1');
     observer.observe(section);
 });
