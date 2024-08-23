@@ -234,3 +234,47 @@ $(function () {
         }, 1250);
     }
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const apresentacao = document.querySelector('.apresentacao');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                apresentacao.classList.add('animate-slide-in');
+            } else {
+                apresentacao.classList.remove('animate-slide-in');
+            }
+        });
+    });
+
+    // Observa a section pai que contém .apresentacao
+    const section = document.querySelector('#section1');
+    observer.observe(section);
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const overlayAboutMe = document.querySelector('.overlay--aboutme');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                overlayAboutMe.classList.add('animate-slide-in-right');
+            } else {
+                overlayAboutMe.classList.remove('animate-slide-in-right');
+            }
+        });
+    });
+
+    // Observa a section pai que contém .overlay--aboutme
+    const section = document.querySelector('#section1'); // Ajuste o seletor conforme necessário
+    observer.observe(section);
+});
