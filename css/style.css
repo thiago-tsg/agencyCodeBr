@@ -646,7 +646,6 @@ footer {
     }
 
     .apresentacao {
-        opacity: 0;
         width: 100% !important;
         padding: 1rem;
         margin: 7rem 0 4rem 0;
@@ -674,7 +673,6 @@ footer {
     }
 
     .overlay--aboutme {
-        opacity: 0;
         width: 100%;
         padding: 1rem;
         flex-direction: column;

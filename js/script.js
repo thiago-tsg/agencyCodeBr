@@ -241,7 +241,7 @@ $(function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Configuração para a animação de entrada do elemento '.apresentacao'
+
     const apresentacao = document.querySelector('.apresentacao');
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -255,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const section1 = document.querySelector('#section1');
     observer1.observe(section1);
 
-    // Configuração para a animação de entrada do elemento '.overlay--aboutme'
     const overlayAboutMe = document.querySelector('.overlay--aboutme');
     const observer2 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -266,6 +265,30 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    const section2 = document.querySelector('#section2'); // Altere para a seção correta
+    const section2 = document.querySelector('#section2');
     observer2.observe(section2);
+
+    const overlaySkills = document.querySelector('.overlay--skills');
+    const observer3 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                overlaySkills.classList.add('animate-slide-in');
+            } else {
+                overlaySkills.classList.remove('animate-slide-in');
+            }
+        });
+    });
+    observer3.observe(overlaySkills);
+
+    const cursos = document.querySelector('.cursos');
+    const observer4 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                cursos.classList.add('animate-slide-in-right');
+            } else {
+                cursos.classList.remove('animate-slide-in-right');
+            }
+        });
+    });
+    observer4.observe(cursos);
 });
