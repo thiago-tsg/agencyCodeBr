@@ -191,8 +191,7 @@ nav ul li a:hover:before {
     align-items: center;
 }
 
-.icon:hover,
-.icon.active {
+.icon:hover {
     transform: translateY(-1rem);
     cursor: pointer;
 }
