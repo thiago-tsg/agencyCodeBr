@@ -761,17 +761,19 @@ footer {
 
     .skills {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1rem 1rem 2rem 1rem;
         gap: 0;
     }
 
     .overlay--skills {
         width: auto;
         padding: 1rem;
+        margin-bottom: 2rem;
     }
 
     .text--skills {
         padding: 0;
+        margin-bottom: 1rem;
     }
 
     .text--skills h2 {
@@ -787,6 +789,7 @@ footer {
 
     .cursos {
         width: auto;
+        padding: 1rem;
     }
 
 
@@ -799,6 +802,16 @@ footer {
 
     .container {
         width: 25rem !important;
+    }
+
+
+    /* CONTATO */
+    .contact{
+        padding: 1rem;
+    }
+
+    .overlay--contact{
+        padding: 1rem;
     }
 }
 
