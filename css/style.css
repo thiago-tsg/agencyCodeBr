@@ -613,6 +613,14 @@ footer {
         margin-top: 5rem;
     }
 
+    .apresentacao h1{
+        font-size: 2.5rem;
+    }
+
+    .apresentacao p{
+        font-size: .8rem;
+    }
+
 
     /* ABOUT-ME */
 
@@ -630,6 +638,14 @@ footer {
         width: 100%;
     }
 
+    .aboutme1 p{
+        font-size: .8rem;
+    }
+
+    .aboutme1 h2{
+        font-size: 1.5rem;
+    }
+
     .icon--aboutme {
         margin: .5rem 0rem;
     }
@@ -641,6 +657,7 @@ footer {
 
     .aboutme2 p {
         padding: 0;
+        font-size: .8rem;
     }
 
     /* HABILIDADE */
