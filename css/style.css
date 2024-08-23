@@ -280,11 +280,11 @@ nav ul li a:hover:before {
     width: 40%;
     border-radius: 30px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 /* SECTION 4 */
@@ -572,10 +572,6 @@ footer {
 @media screen and (max-width: 429px) {
     /* STYLE GERAL */
 
-    html{
-        background-color: red;
-    }
-
     body {
         overflow: auto;
     }
@@ -590,8 +586,14 @@ footer {
 
     /* HEADER */
 
+    header{
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+
     nav div h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .menu--desktop {
@@ -607,7 +609,7 @@ footer {
     .apresentacao {
         width: 100% !important;
         padding: 1rem;
-        margin: 5rem 0 2rem 0;
+        margin-top: 5rem;
     }
 
 
