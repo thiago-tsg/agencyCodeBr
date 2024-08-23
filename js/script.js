@@ -314,32 +314,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-
 document.querySelectorAll('.icon').forEach(icon => {
-    // Adiciona a classe touch ao tocar
-    icon.addEventListener('touchstart', () => {
-        icon.classList.add('touch');
+    icon.addEventListener('touchstart', function(e) {
+        e.preventDefault(); // Evita que o evento de toque cause problemas com o hover
+        // Remove a classe 'active' de todos os ícones
+        document.querySelectorAll('.icon').forEach(i => i.classList.remove('active'));
+        // Adiciona a classe 'active' ao ícone tocado
+        this.classList.add('active');
     });
 
-    // Remove a classe touch após o toque
-    icon.addEventListener('touchend', () => {
-        icon.classList.remove('touch');
-    });
-
-    // Adiciona a classe hover ao passar o mouse
-    icon.addEventListener('mouseover', () => {
-        icon.classList.add('hover');
-    });
-
-    // Remove a classe hover ao retirar o mouse
-    icon.addEventListener('mouseout', () => {
-        icon.classList.remove('hover');
+    // Remove a classe 'active' quando o toque é terminado
+    icon.addEventListener('touchend', function() {
+        this.classList.remove('active');
     });
 });

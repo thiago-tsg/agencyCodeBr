@@ -189,16 +189,13 @@ nav ul li a:hover:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
 }
 
 .icon:hover,
-.icon:focus,
-.icon:active {
+.icon.active {
     transform: translateY(-1rem);
     cursor: pointer;
 }
-
 
 .icon i {
     font-size: 2.5rem;
