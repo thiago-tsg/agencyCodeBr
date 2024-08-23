@@ -603,7 +603,16 @@ footer {
 
     .apresentacao {
         width: auto !important;
-        padding: 1rem 1rem;
+        padding: 1rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+
+
+
+
+    .aboutme {
+        padding: 1rem;
     }
 
     .overlay--aboutme {
@@ -627,6 +636,11 @@ footer {
     .aboutme2 p {
         padding: 0;
     }
+
+
+
+
+
 
 
 
@@ -675,10 +689,9 @@ footer {
     }
 }
 
-
-
-
 @media screen and (min-width: 481px) and (max-width: 767px) {
+
+    /* STYLE GERAL */
 
     body {
         overflow: auto;
@@ -692,6 +705,8 @@ footer {
         height: auto;
     }
 
+    /* HEADER */
+
     nav div h1 {
         font-size: 2.5rem;
     }
@@ -699,10 +714,6 @@ footer {
     .menu--desktop {
         display: none;
     }
-
-
-
-
 
     /* SECTION 1 APRESENTAÇÃO */
 
@@ -712,7 +723,15 @@ footer {
 
     .apresentacao {
         width: auto !important;
-        padding: 1rem 1rem;
+        padding: 1rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+
+    /* ABOUT-ME */
+
+    .aboutme {
+        padding: 1rem;
     }
 
     .overlay--aboutme {
@@ -737,13 +756,7 @@ footer {
         padding: 0;
     }
 
-
-
-
-
-
-
-
+    /* HABILIDADE */
 
     .skills {
         flex-direction: column;
@@ -774,6 +787,9 @@ footer {
         width: auto;
     }
 
+
+    /* PROJECT */
+
     .overlay--projects {
         width: auto;
         padding: 0;
@@ -784,12 +800,8 @@ footer {
     }
 }
 
-
-/* Small Mobile (S) */
 @media screen and (min-width: 480px) and (max-width: 639px) {
     html {
         background-color: blue;
     }
-
-
 }
