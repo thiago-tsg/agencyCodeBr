@@ -569,7 +569,12 @@ footer {
 
 /* Extra Small Mobile (XS) */
 
-@media (max-width: 431px) {
+@media screen and (max-width: 429px) {
+    /* STYLE GERAL */
+
+    html{
+        background-color: red;
+    }
 
     body {
         overflow: auto;
@@ -583,6 +588,8 @@ footer {
         height: auto;
     }
 
+    /* HEADER */
+
     nav div h1 {
         font-size: 2.5rem;
     }
@@ -591,10 +598,6 @@ footer {
         display: none;
     }
 
-
-
-
-
     /* SECTION 1 APRESENTAÇÃO */
 
     .c--apresentacao {
@@ -602,27 +605,26 @@ footer {
     }
 
     .apresentacao {
-        width: auto !important;
+        width: 100% !important;
         padding: 1rem;
         margin: 5rem 0 2rem 0;
     }
 
 
-
-
+    /* ABOUT-ME */
 
     .aboutme {
         padding: 1rem;
     }
 
     .overlay--aboutme {
-        width: auto;
+        width: 100%;
         padding: 1rem;
         flex-direction: column;
     }
 
     .aboutme1 {
-        width: auto;
+        width: 100%;
     }
 
     .icon--aboutme {
@@ -630,38 +632,31 @@ footer {
     }
 
     .aboutme2 {
-        width: auto;
+        width: 100%;
+        margin-top: 1rem;
     }
 
     .aboutme2 p {
         padding: 0;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    /* HABILIDADE */
 
     .skills {
         flex-direction: column;
-        padding: 0;
+        padding: 1rem 1rem 2rem 1rem;
         gap: 0;
     }
 
     .overlay--skills {
-        width: auto;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 2rem;
     }
 
     .text--skills {
         padding: 0;
+        margin-bottom: 1rem;
     }
 
     .text--skills h2 {
@@ -671,25 +666,39 @@ footer {
     }
 
     .icon--skills {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         padding: 0;
     }
 
     .cursos {
-        width: auto;
+        width: 100%;
+        padding: 1rem;
     }
 
+
+    /* PROJECT */
+
     .overlay--projects {
-        width: auto;
+        width: 100%;
         padding: 0;
     }
 
     .container {
-        width: 25rem !important;
+        width: 22rem !important;
+    }
+
+
+    /* CONTATO */
+    .contact {
+        padding: 1rem;
+    }
+
+    .overlay--contact {
+        padding: 1rem;
     }
 }
 
-@media screen and (min-width: 432px) and (max-width: 767px) {
+@media screen and (min-width: 430px) and (max-width: 767px) {
 
     /* STYLE GERAL */
 
@@ -806,11 +815,11 @@ footer {
 
 
     /* CONTATO */
-    .contact{
+    .contact {
         padding: 1rem;
     }
 
-    .overlay--contact{
+    .overlay--contact {
         padding: 1rem;
     }
 }
