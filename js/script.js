@@ -310,3 +310,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     observer6.observe(overlayContact);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.icon').forEach(icon => {
+    icon.addEventListener('touchstart', () => {
+        icon.classList.add('active');
+    });
+    
+    icon.addEventListener('touchend', () => {
+        icon.classList.remove('active');
+    });
+});
