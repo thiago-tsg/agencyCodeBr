@@ -715,6 +715,10 @@ footer {
 
     /* PROJECT */
 
+    .project{
+        padding: 1rem;
+    }
+
     .overlay--projects {
         width: 100%;
         padding: 0;
@@ -727,6 +731,7 @@ footer {
         width: 22rem !important;
     }
 
+    
 
     /* CONTATO */
     .contact {
