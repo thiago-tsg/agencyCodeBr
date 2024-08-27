@@ -28,8 +28,61 @@
 
 body {
     scroll-behavior: smooth;
-    overflow: hidden;
     height: 100vh;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInRight {
+
+    0% {
+        opacity: 0;
+        transform: translateX(100%) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-10%) rotate(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes slideInLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(10%) rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.animate-slide-in {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
 }
 
 /* HEADER */
@@ -54,7 +107,7 @@ nav {
 
 nav div h2 {
     font-family: var(--titulo);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 nav ul {
@@ -286,7 +339,7 @@ nav ul li a:hover:before {
     gap: 2rem;
 }
 
-.text--cursos{
+.text--cursos {
     padding: 1rem 2rem 0rem 2rem;
 }
 
@@ -412,12 +465,6 @@ nav ul li a:hover:before {
     width: 100%;
 }
 
-@media screen and (min-width: 576px) {
-    .container-carrossel {
-        --widthItem: 250px;
-        --heightItem: 200px;
-    }
-}
 
 /* SECTION 5 */
 
@@ -551,78 +598,42 @@ button[type="submit"] {
     content: "\f00c";
 }
 
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .box-select {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-}
-
 /* FOOTER */
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 0;
     background-color: #333;
     color: white;
 }
 
-
-
-
-
-
-@keyframes slideInRight {
-
-    0% {
-        opacity: 0;
-        transform: translateX(100%) rotate(0deg);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(-10%) rotate(-10deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+footer h5{
+    font-family: var(--titulo);
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
-@keyframes slideInLeft {
-
-    0% {
-        opacity: 0;
-        transform: translateX(-100%) rotate(0deg);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(10%) rotate(10deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
-    
+.menu--rodape {
+    align-items: center;
+    justify-content: center;
 }
 
-.animate-slide-in {
-    animation: slideInLeft 1s ease-out forwards;
+.footer--contato{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: .3rem 1rem;
 }
 
-.animate-slide-in-right {
-    animation: slideInRight 1s ease-out forwards;
-}
 
+
+
+
+@media screen and (min-width: 576px) {
+    .container-carrossel {
+        --widthItem: 250px;
+        --heightItem: 200px;
+    }
+}
 
 /* Extra Small Mobile (XS) */
 
@@ -633,10 +644,10 @@ footer {
         overflow: auto;
         height: 100%;
         background-image: url('../assets/background/bg--mobile.gif');
-        background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .background--img {
@@ -795,7 +806,7 @@ footer {
         margin-bottom: 4rem;
     }
 
-    .overlay--projects h2{
+    .overlay--projects h2 {
         padding-bottom: 0;
         font-size: 2rem;
     }
@@ -819,14 +830,14 @@ footer {
         margin-bottom: 4rem;
     }
 
-    .overlay--contact h1{
+    .overlay--contact h1 {
         margin-bottom: 2rem;
     }
 
 
     /* FORMULARIO */
 
-    form{
+    form {
         width: 90%;
     }
 }
@@ -955,12 +966,5 @@ footer {
 
     .overlay--contact {
         padding: 1rem;
-    }
-}
-
-
-@media screen and (min-width: 480px) and (max-width: 639px) {
-    html {
-        background-color: blue;
     }
 }
