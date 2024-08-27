@@ -53,7 +53,7 @@ nav {
     align-items: center;
 }
 
-nav div h1 {
+nav div h2 {
     font-family: var(--titulo);
     font-size: 3rem;
 }
@@ -433,7 +433,7 @@ nav ul li a:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
 }
 
-.overlay--contact h1 {
+.overlay--contact h3 {
     font-family: var(--titulo);
     font-size: 2rem;
     margin-bottom: .5rem;
