@@ -337,6 +337,10 @@ nav ul li a:hover:before {
     cursor: grab;
 }
 
+.carrossel.grabbing {
+    cursor: grabbing;
+}
+
 .carrossel-item {
     opacity: 0.5;
     position: absolute;
@@ -568,25 +572,36 @@ footer {
 
 
 @keyframes slideInRight {
-    from {
-        transform: translateX(100%);
+
+    0% {
         opacity: 0;
+        transform: translateX(100%) rotate(0deg);
     }
-    to {
-        transform: translateX(0);
+    50% {
         opacity: 1;
+        transform: translateX(-10%) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
     }
 }
 
 @keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
+
+    0% {
         opacity: 0;
+        transform: translateX(-100%) rotate(0deg);
     }
-    to {
-        transform: translateX(0);
+    50% {
         opacity: 1;
+        transform: translateX(10%) rotate(10deg);
     }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+    
 }
 
 .animate-slide-in {
@@ -606,7 +621,7 @@ footer {
     body {
         overflow: auto;
         height: 100%;
-        background-image: url('../assets/background/bg--desktop.gif');
+        background-image: url('../assets/background/bg--mobile.gif');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -691,7 +706,8 @@ footer {
     }
 
     .aboutme1 h2 {
-        font-size: 1.5rem;
+        font-family: var(--titulo);
+        font-size: 2rem;
     }
 
     .icon--aboutme {

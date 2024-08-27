@@ -44,7 +44,7 @@ let moveTo = 0;
 const createcarrossel = () => {
     const carrosselProps = onResize();
     const length = carrosselItems.length;
-    const degress = 360 / length;
+    const degrees = 360 / length;
     const gap = 20;
     const tz = distanceZ(carrosselProps.w, length, gap);
 
@@ -55,8 +55,8 @@ const createcarrossel = () => {
     container.style.height = height + "px";
 
     carrosselItems.forEach((item, i) => {
-        const degressByItem = degress * i + "deg";
-        item.style.setProperty("--rotatey", degressByItem);
+        const degreesByItem = degrees * i + "deg";
+        item.style.setProperty("--rotatey", degreesByItem);
         item.style.setProperty("--tz", tz + "px");
     });
 };
@@ -151,7 +151,21 @@ const initEvents = () => {
     createcarrossel();
 };
 
+const initMobileEvents = () => {
+    carrosselItems.forEach((item) => {
+        item.addEventListener("touchstart", () => {
+            item.style.opacity = "1";
+        });
+
+        item.addEventListener("touchend", () => {
+            item.style.opacity = "0.5";
+        });
+    });
+};
+
 initEvents();
+initMobileEvents();
+
 
 
 // FORMULARIO CONTATO
