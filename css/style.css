@@ -608,6 +608,14 @@ footer {
     color: white;
 }
 
+.cg--footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 footer h5 {
     font-family: var(--titulo);
     font-size: 4rem;
@@ -631,6 +639,7 @@ footer h5 {
 }
 
 .footer--credit{
+    width: 100%;
     background-color: black;
     padding: .3rem 0;
     letter-spacing: 5px;
