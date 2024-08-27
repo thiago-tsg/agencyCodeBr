@@ -364,37 +364,37 @@ nav ul li a:hover:before {
 .carrossel-item:nth-child(1) {
     --rotatey: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #fbd52d, #ef3a7b);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item:nth-child(2) {
     --rotatey: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ff70af, #5fa8f5);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item:nth-child(3) {
     --rotatey: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item:nth-child(4) {
     --rotatey: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #88f7f9, #048fff);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item:nth-child(5) {
     --rotate: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #0093e9, #80d0c7);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item:nth-child(6) {
     --rotatey: 0;
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #cf91ff, #5782f5);
+    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
 }
 
 .carrossel-item img {
