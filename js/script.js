@@ -167,8 +167,7 @@ initEvents();
 initMobileEvents();
 
 
-
-// FORMULARIO CONTATO
+// FORMULARIO
 
 const form = document.getElementById('form');
 const campos = document.querySelectorAll('.required');
@@ -176,10 +175,15 @@ const spans = document.querySelectorAll('.span-required');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    nameValidate();
-    emailValidate();
-    phoneValidate();
-})
+
+    const nameValid = nameValidate();
+    const emailValid = emailValidate();
+    const phoneValid = phoneValidate();
+
+    if (nameValid && emailValid && phoneValid) {
+        form.submit(); // Envia o formulário se todas as validações forem bem-sucedidas
+    }
+});
 
 function setError(index) {
     campos[index].style.border = '2px solid #e63636';
@@ -194,9 +198,10 @@ function removeError(index) {
 function nameValidate() {
     if (campos[0].value.length < 3) {
         setError(0);
-    }
-    else {
+        return false;
+    } else {
         removeError(0);
+        return true;
     }
 }
 
@@ -204,9 +209,10 @@ function emailValidate() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(campos[1].value)) {
         setError(1);
-    }
-    else {
+        return false;
+    } else {
         removeError(1);
+        return true;
     }
 }
 
@@ -216,19 +222,26 @@ function phoneValidate() {
 
     if (!isValidPhone) {
         setError(2);
+        return false;
     } else {
         removeError(2);
+        return true;
     }
 }
 
-
-// BUTTON FORMS
-
+// BOTÕES
 
 $(function () {
     $("#button").click(function () {
-        $("#button").addClass("onclic");
-        setTimeout(validate, 250);
+        // Execute a validação antes de adicionar classes ao botão
+        const nameValid = nameValidate();
+        const emailValid = emailValidate();
+        const phoneValid = phoneValidate();
+
+        if (nameValid && emailValid && phoneValid) {
+            $("#button").addClass("onclic");
+            setTimeout(validate, 250);
+        }
     });
 
     function validate() {
@@ -244,6 +257,7 @@ $(function () {
         }, 1250);
     }
 });
+
 
 
 // ENTRADA DAS DIV A TELA
