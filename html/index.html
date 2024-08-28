@@ -306,28 +306,28 @@
             <div class="background--img contact">
                 <div class="overlay--contact">
                     <h3>Me envie uma mensagem </h3>
-                    <form id="form" class="form">
+                    <form id="form" class="form" action="../php/send_email.php" method="post">
                         <div>
-                            <input type="text" class="inputs required" placeholder="Digite seu nome"
+                            <input type="text" name="name" class="inputs required" placeholder="Digite seu nome"
                                 oninput="nameValidate()">
                             <span class="span-required">
                                 Nome deve ter no minimo 3 caracteres
                             </span>
                         </div>
                         <div>
-                            <input type="email" class="inputs required" placeholder="Digite seu email"
+                            <input type="email" name="email" class="inputs required" placeholder="Digite seu email"
                                 oninput="emailValidate()">
                             <span class="span-required">Digite um email válido</span>
                         </div>
                         <div>
-                            <input type="tel" class="inputs required" placeholder="Digite seu telefone" id="">
+                            <input type="tel" name="phone" class="inputs required" placeholder="Digite seu telefone" id="">
                             <span class="span-required">Digite um telefone válido</span>
                         </div>
-                        <textarea name="descricao" id="descricao" class="inputs" cols="25" rows="10"
-                            aria-placeholder="Fale um pouco sobre você"></textarea>
+                        <textarea name="message" id="descricao" class="inputs" cols="25" rows="10" placeholder="Fale um pouco sobre você">
+                        </textarea>
 
                         <div class="btn--forms">
-                            <button id="button" class="btn">
+                            <button id="button" class="btn" type="submit">
 
                             </button>
                         </div>
