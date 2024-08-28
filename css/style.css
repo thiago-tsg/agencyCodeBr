@@ -24,6 +24,7 @@
     --color-red: #e63636;
     --color-dark1: #181818;
     --color-dark2: #1e1e1e;
+    
 }
 
 body {
@@ -149,7 +150,7 @@ nav ul li a:hover:before {
     display: flex;
 }
 
-/* SECTION 1 */
+/* APRESENTAÇÃO */
 
 .background--img {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(../assets/background/bg--desktop.gif);
@@ -202,7 +203,7 @@ nav ul li a:hover:before {
     color: #f1bebe;
 }
 
-/* SECTION 2 */
+/* SOBRE MIM */
 
 .overlay--aboutme {
     width: 74rem;
@@ -261,7 +262,7 @@ nav ul li a:hover:before {
     padding-left: 2rem;
 }
 
-/* SECTION 3 */
+/* HABILIDADES */
 
 .skills {
     padding: 2.5rem 2rem 0 2rem;
@@ -344,24 +345,25 @@ nav ul li a:hover:before {
     padding: 1rem 2rem 0rem 2rem;
 }
 
-/* SECTION 4 */
+/* PORTIFOLIO */
 
 .overlay--projects {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 50rem;
-    padding: 3rem 1rem;
+    width: 80%;
+    height: 83%;
     text-align: center;
     border-radius: 30px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
 }
 
 .overlay--projects h2 {
     font-family: var(--titulo);
     font-size: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .conteudo__geral {
@@ -377,8 +379,8 @@ nav ul li a:hover:before {
 }
 
 .container-carrossel {
-    --widthItem: 150px;
-    --heightItem: 100px;
+    --widthItem: 200px;
+    --heightItem: 150px;
     width: var(--widthItem);
     height: var(--heightItem);
     perspective: 1000px;
@@ -398,7 +400,14 @@ nav ul li a:hover:before {
     cursor: grabbing;
 }
 
-.carrossel-item {
+.carrossel, .carrossel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.carrossel-item{
+    display: flex;
+    flex-direction: column;
     opacity: 0.5;
     position: absolute;
     display: flex;
@@ -406,68 +415,29 @@ nav ul li a:hover:before {
     align-items: center;
     border-radius: 5px;
     transition: opacity 0.5s;
-}
-
-.carrossel-item:hover {
-    opacity: 1;
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
-
-.carrossel,
-.carrossel-item {
-    width: 100%;
-    height: 100%;
-}
-
-.carrossel-item:nth-child(1) {
-    --rotatey: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
     padding: 1.5rem .5rem 0 .5rem;
 }
 
-.carrossel-item:nth-child(2) {
-    --rotatey: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
-    padding: 1.5rem .5rem 0 .5rem;
-}
-
-.carrossel-item:nth-child(3) {
-    --rotatey: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
-    padding: 1.5rem .5rem 0 .5rem;
-}
-
-.carrossel-item:nth-child(4) {
-    --rotatey: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
-    padding: 1.5rem .5rem 0 .5rem;
-}
-
-.carrossel-item:nth-child(5) {
-    --rotate: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
-    padding: 1.5rem .5rem 0 .5rem;
-}
-
-.carrossel-item:nth-child(6) {
-    --rotatey: 0;
-    transform: rotatey(var(--rotatey)) translatez(var(--tz));
-    background: linear-gradient(-229deg, #ffffffa9, #6d6d6d7e);
-    padding: 1.5rem .5rem 0 .5rem;
+.carrossel-item P{
+    font-size: 2rem;
+    font-family: var(--titulo);
 }
 
 .carrossel-item img {
     width: 100%;
 }
 
+.carrossel-item:hover {
+    opacity: 1;
+}
 
-/* SECTION 5 */
+
+/* CONTATO */
 
 .overlay--contact {
     padding: 1rem;
@@ -645,15 +615,17 @@ footer h5 {
     letter-spacing: 5px;
 }
 
+/* MEDIA QUERY */
+
+/* MOBILE */
 
 @media screen and (min-width: 576px) {
     .container-carrossel {
-        --widthItem: 250px;
-        --heightItem: 200px;
+        --widthItem: 350px;
+        --heightItem: 300px;
     }
 }
 
-/* Extra Small Mobile (XS) */
 
 @media screen and (max-width: 429px) {
     /* STYLE GERAL */
@@ -840,9 +812,8 @@ footer h5 {
         width: 22rem !important;
     }
 
-
-
     /* CONTATO */
+
     .contact {
         padding: 1rem;
     }
@@ -858,7 +829,6 @@ footer h5 {
     .overlay--contact h1 {
         margin-bottom: 2rem;
     }
-
 
     /* FORMULARIO */
 
@@ -1010,3 +980,7 @@ footer h5 {
         padding: 1rem;
     }
 }
+
+/* TABLET */
+
+/* TELAS MAIORES */
