@@ -837,8 +837,17 @@ footer h5 {
         width: 22rem !important;
     }
 
+    .carrossel-item{
+        width: 100%;
+    }
+
     .carrossel-item p{
         display: none;
+    }
+
+    .ci--projeto{
+        width: 9rem;
+        height: 9rem;
     }
 
     /* CONTATO */
