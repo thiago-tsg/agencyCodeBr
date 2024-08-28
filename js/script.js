@@ -45,7 +45,7 @@ const createcarrossel = () => {
     const carrosselProps = onResize();
     const length = carrosselItems.length;
     const degrees = 360 / length;
-    const gap = 20;
+    const gap = 5;
     const tz = distanceZ(carrosselProps.w, length, gap);
 
     const fov = calculateFov(carrosselProps);
