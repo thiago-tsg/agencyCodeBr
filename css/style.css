@@ -24,7 +24,6 @@
     --color-red: #e63636;
     --color-dark1: #181818;
     --color-dark2: #1e1e1e;
-    
 }
 
 
@@ -678,13 +677,6 @@ footer h5 {
     padding: .3rem 1rem;
 }
 
-.footer--credit{
-    width: 100%;
-    background-color: black;
-    padding: .3rem 0;
-    letter-spacing: 5px;
-}
-
 /* MEDIA QUERY */
 
 /* MOBILE */
@@ -922,6 +914,8 @@ footer h5 {
         width: 90%;
     }
 
+    /* FOOTER */
+
     .crodape{
         display: flex;
         justify-content: center;
@@ -931,7 +925,7 @@ footer h5 {
     }
 
     .footer--icon{
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
     }
 
@@ -1065,6 +1059,10 @@ footer h5 {
     .overlay--contact {
         padding: 1rem;
     }
+
+    /* ICON FOOTER */
+
+
 }
 
 /* TABLET */
